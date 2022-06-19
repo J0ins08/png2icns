@@ -1,3 +1,4 @@
+import sys
 from pathlib import Path
 
 from PyQt5.QtWidgets import (
@@ -21,7 +22,7 @@ class MainWindowUI:
         # drop_icon label
         drop_icon_label = QLabel()
         drop_icon_label.setMaximumSize(QSize(50, 50))
-        drop_icon = Path.cwd().joinpath('img/drop_icon.png')
+        drop_icon = Path(sys.argv[0]).parent.joinpath('img/drop_icon.png')
         drop_icon_label.setPixmap(QPixmap(str(drop_icon)))
         drop_icon_label.setScaledContents(True)
 

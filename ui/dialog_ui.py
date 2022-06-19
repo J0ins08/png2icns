@@ -1,3 +1,4 @@
+import sys
 from pathlib import Path
 
 from PyQt5.QtWidgets import QDialog, QFrame, QVBoxLayout, QLabel
@@ -18,7 +19,7 @@ class About_dialogUI(QDialog):
         # app_icon label
         app_icon_label = QLabel()
         app_icon_label.setMaximumSize(QSize(64, 64))
-        app_icon = Path.cwd().joinpath('img/app_icon.png')
+        app_icon = Path(sys.argv[0]).parent.joinpath('img/app_icon.png')
         app_icon_label.setPixmap(QPixmap(str(app_icon)))
         app_icon_label.setScaledContents(True)
 

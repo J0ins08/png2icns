@@ -1,7 +1,7 @@
 ## png2icns
 A simple tool to convert png image to icns icon for macOS.
 
-### Previes
+### Preview
 ![Preview](https://github.com/J0ins08/png2icns/blob/main/preview/preview.png)
 
 ### How to use
